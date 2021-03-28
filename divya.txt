@@ -1,0 +1,211 @@
+name=str(input("enter worker name:"));
+hours=float(input("enter hours worked:"));
+wages=float(input("enter dollars paid per hours:"));
+if hours<=40:
+    totalwages=hours*wages
+else:
+    overtime=hours-40
+    totalwages=wages*40+(1.5*wages)*overtime
+    print("the worker:"+name+"total weekly wages is")
+    print(totalwages)
+	
+	
+m1=int(input("enter the first subject mark:"))
+m2=int(input("enter the second subject mark:"))
+m3=int(input("enter the third subject mark:"))
+m4=int(input("enter the fourth subject mark:"))
+if m1>85 and m1<=100 and m2>85 and m2<=100 and m3>85 and m3<=100 and m4>85 and m4<=100:
+print(" you scored  A grade")
+if m1>60 and m1<=85 and m2>60 and m2<=85 and m3>60 and m3<=85 and m4>60 and m4<=85:
+print(" you scored B grade")
+if m1>40 and m1<=60 and m2>40 and m2<=60 and m3>40 and m3<=60 and m4>40 and m4<=60:
+print(" you scored  C grade")
+if m1>30 and m1<=40 and m2>30 and m2<=40 and m3>30 and m3<=40 and m4>30 and m4<=40:
+print(" you scored  D grade")
+else:
+print("sorry you fail"):
+
+
+import random
+name=input("enter the name:") 
+print("good luck",name)
+words=['divya','dinesh','player','aathish'] 
+word=random.choice(words) 
+guesses="   "
+turns=10
+while turns>0:
+     failed = 0
+     for char in word:
+        if char in guesses:
+                print(char)
+        else:
+                print(" _ ") 
+                failed += 1
+     if failed == 0:
+          print("you win") 
+          break
+     guess=input("guess the character:")
+     guesses += guess
+     if guess not in word:
+             turns -= 1
+             print ("wrong") 
+             if turns==0:
+                     print("you loose")
+					 
+					 
+				
+def add(x,y):
+    return x+y
+def sub(x,y):
+    return x-y
+def multiple(x,y):
+    return x*y
+def divide(x,y):
+    return x/y
+print("select oertions:") 
+print("1.add") 
+print("2.subract") 
+print("3.multiple") 
+print("4.divide") 
+choice=input("choice 1/2/3/4:") 
+num1=float(input("enter the first number:")) 
+num2=float(input("enter the second number:")) 
+if choice=='1':
+    print(num1,'+',num2,'=',add(num1,num2)) 
+elif choice=='2':
+    print(num1,'-',num2,'=',sub(num1,num2)) 
+elif choice=='3':
+    print(num1,'*',num2,'=',multiple(num1,num2))  
+elif choice=='4':
+    print(num1,'/',num2,'=',divide(num1,num2)) 
+else:
+    print("invalid input")
+    
+
+        
+    
+student=['student1'] 
+print(student)    
+student.append ("computer science") 
+print(student) 
+marks=[50,70,60] 
+marks.insert(2,90) 
+marks.insert(0,45) 
+print(marks) 
+total=sum(marks) 
+print(marks) 
+student.append(total) 
+print(student) 
+print(student.count('computer science')) 
+print(min(marks)) 
+print(max(marks)) 
+print(marks.index(60)) 
+print(marks.pop()) 
+print(marks) 
+print(len(student)) 
+
+
+
+
+tup1=(1,2,3,'python','pogramming') 
+print(tup1) 
+tup2=(90,20) 
+print(tup1+tup2)  
+tup1[1:4]
+tup1[1:2] 
+def sort_tuple(tup1): 
+    lst=len(tup1)
+    for i in range(0,lst):
+      for j in range(0 ,lst-i-1): 
+          if(tup[j][1]>tup[j+1][1]):
+                           temp=tup[j]
+                           tup[j]=tup[j+1] 
+                           tup[j+1]=temp
+    return tup
+tup=[('python',10),('divya',5),('friend',1)]
+print(sort_tuple(tup)) 
+
+
+from functools import reduce
+def fahrenhiet(T):
+    return(float(9/5)*T+32)
+def celsius(T):
+    return(float(9/5)*T-32) 
+temperatures=(36.5,37,37.5,38,39)
+F=map(fahrenhiet,temperatures) 
+C=map(celsius,F) 
+temperature_in_fahrenhiet=list(map(fahrenhiet,temperatures)) 
+temperature_in_celsius=list(map(celsius,temperature_in_fahrenhiet)) 
+print(temperature_in_fahrenhiet) 
+print(temperature_in_celsius) 
+filter_result=list(filter(lambda X:X >=37 and X<=38,temperatures)) 
+print(filter_result) 
+reduce_result=reduce(lambda num1,num2:num1*num2,temperatures)
+reducesum=reduce(lambda num1,num2:num1-num2,temperatures)
+print(reduce_result)
+print(reducesum)
+
+def triangle(a,b,c):
+    peri=(a+b+c)/2
+    print("the semi perimeter of the triangle:",peri) 
+    area=(peri*(peri-a)*(peri-b)*(peri-c))**0.5
+    print("the area of the triangle:",area) 
+    print(area)
+	
+	
+def rectangle(a,b): 
+    peri=2*(a+b)
+    print("the semi perimeter of the rectangle:",peri) 
+    area=a*b
+    print("the area of the rectangle:",area) 
+    print(area) 
+
+def square(a): 
+    peri=4*(a)
+    print("the semi perimeter of the square:",peri) 
+    area=a*a
+    print("the area of the square:",area) 
+    print(area) 
+	
+from module1 import triangle
+from module2 import rectangle
+from module3 import square
+triangle(5, 6, 7) 
+rectangle(5, 10)
+square(5)
+
+
+class employee:
+    empcount=0
+    def __init__(self, empid, name, salary, did):
+      self.empid=empid
+      self.name=name
+      self.salary=salary
+      self.did=did
+      employee.empcount+=1
+    def displayemployee(self):
+      print("empid:",self.empid,"name:",self.name,"salary:",self.salary,"did:",self.did) 
+emp1=employee(1,'divya',2000,104)   
+emp2=employee(2,'dinesh',6900,102)  
+emp1.displayemployee() 
+emp2.displayemployee()
+print("total employee",employee.empcount) 
+
+
+
+
+def finddigitscharsymbols(inputstring):
+    charcount=0
+    digitcount=0
+    symbolcount=0
+    for char in inputstring:
+        if char.islower() or char.isupper():
+            charcount += 1
+        elif char.isnumeric():
+            digitcount += 1
+        else:
+            symbolcount += 1
+    print("chars:",charcount,"digits:",digitcount,"symbols:",symbolcount)
+inputstring="python**123" 
+print("total no of char and digits and symbols")     
+finddigitscharsymbols(inputstring)
