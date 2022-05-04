@@ -1,0 +1,355 @@
+2. TEST DATA IN A FLAT FILE
+Program Coding:
+package Mytest;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import com.google.common.collect.Table.Cell;
+public class testexcel {
+public static void main(String[] args) throws FileNotFoundException {
+int rowCount, colCount;
+File file=new File("C:\\Users\\workspace\\TestingExercise\\Book1.xlsx");
+XSSFWorkbook wb;
+XSSFSheet sh=null;
+try{
+wb= new XSSFWorkbook(file);
+sh= wb.getSheet("Sheet2");
+} catch (Exception e){ System.out.println("error"); }
+XSSFRow row=sh.getRow(0);
+int noofrows= row.getLastCellNum();
+System.out.println("Total No Of Rows in the Sheet :" +noofrows);
+System.out.println(sh.getRow(1).getCell(0).getStringCellValue());
+System.out.println(sh.getRow(1).getCell(1).getStringCellValue());
+System.out.println(sh.getRow(2).getCell(0).getStringCellValue());
+System.out.println(sh.getRow(2).getCell(1).getStringCellValue());
+}
+}
+
+
+4. SELECT THE NUMBER OF STUDENTS WHO SCORED
+ABOVE 60 PERCNTAGE
+Program Coding:
+package Mytest;
+import java.util.Scanner;
+public class percentageabove60 {
+public static void main(String[] args) {
+Scanner SC=new Scanner(System.in);
+System.out.println("Enter the number of students");
+int n = SC.nextInt();
+String name[] = new String[n];
+int percentage[] = new int[n];
+for(int i=0; i<n; i++){
+System.out.println("Student Detail "+i);
+System.out.print("Enter Name: ");
+SC.nextLine();
+name[i]=SC.nextLine();
+System.out.print("Enter Percentage: ");
+percentage[i]=SC.nextInt();
+}
+for (int j=0;j<n;j++){
+if(percentage[j] > 60){
+System.out.println("Student "+name[j]+" having percentage"+percentage[j]+" has above 60 Percentage");
+}
+}
+}
+}
+
+
+5. TEST A PROGRAM TO LOGIN A SPECIFIC WEB PAGE
+Program Coding:
+package Mytest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class loginwebpage {
+public static void main(String[] args) throws InterruptedException {
+System.setProperty("webdriver.chrome.driver", "C:\\Users \\Desktop\\SP\\Testing SW\\TCS Addon\\Softwares\\chromedriver.exe");
+WebDriver driver = new ChromeDriver();
+driver.get("http://newtours.demoaut.com/");
+driver.findElement(By.name("userName")).sendKeys("tutorial");
+driver.findElement(By.name("password")).sendKeys("tutorial");
+Thread.sleep(1000);
+driver.findElement(By.xpath("/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[3]/form/table/tbody/tr[4]/td/table/tbody/tr[4]/td[2]/div/input")).click();
+}
+}
+
+
+6. TEST A PROGRAM TO GET THE NUMBER OF ITEMS IN COMBO BOX
+Program Coding:
+package Mytest;
+import java.awt.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+public class combocount {
+public static void main(String[] args) {
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\Desktop\\SP\\Testing SW\\TCS Addon\\Softwares\\chromedriver.exe");
+WebDriver driver = new ChromeDriver();
+driver.get("C:\\Users\\Malar\\workspace\\TestingExercise\\combocount.html");
+//Assign and Select the dropdown list element
+Select selectDropdown = new Select(driver.findElement(By.id("cbo1")));
+//Get all the option from dropdown list and assign into List
+java.util.List<WebElement> listOptionDropdown = selectDropdown.getOptions();
+// Count the item dropdown list and assign into integer variable
+int dropdownCount = listOptionDropdown.size();
+//Print the total count of dropdown list using integer variable
+System.out.println("Total Number of item count in dropdown list = " + dropdownCount);
+}
+}
+
+Combocount.html
+<html>
+<body>
+<h1><center>Program to check Combo Items</center></h1>
+<h3>Select the Department</h3>
+<select id="cbo1">
+<option>B.Sc CS</option>
+<option>B.Sc IT</option>
+<option>BCA</option>
+<option>B.Com CA</option>
+<option>BBA</option>
+<option>BA</option>
+</select>
+</body>
+</html>
+
+
+
+7. TEST A HTML FILE
+Program Coding:
+package Mytest;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class testhtml {
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\Desktop\\SP\\Testing SW\\TCS Addon\\Softwares\\chromedriver.exe");
+// TODO Auto-generated method stub
+WebDriver driver = new ChromeDriver();
+driver.get("C:\\Users\\Malar\\Desktop\\Testing\\login.html");
+}
+}
+Login.html
+<html>
+<head>
+<title>Login </title>
+</head>
+<body>
+<h4><center>Myklass Login Page</center> </h4> </br>
+<p5>Email address: </p5>
+<input type="text" Email address=""> </br> </br>
+<p6>Password: </p6>
+<input type="password" > </br>
+<p> <font color="black"> <a href="#">Login </a></p> </font>
+</body>
+</html>
+
+8. TEST A PROGRAM IN MS EXCEL DATA DRIVEN WIZARD
+Program Coding:
+import java.io.File;
+import java.io.IOException;
+import java.util.Locale;
+import jxl.CellView;
+import jxl.Workbook;
+import jxl.WorkbookSettings;
+import jxl.format.UnderlineStyle;
+import jxl.write.Formula;
+import jxl.write.Label;
+import jxl.write.Number;
+import jxl.write.WritableCellFormat;
+import jxl.write.WritableFont;
+import jxl.write.WritableSheet;
+import jxl.write.WritableWorkbook;
+import jxl.write.WriteException;
+import jxl.write.biff.RowsExceededException;
+public class student_excel_write {
+private WritableCellFormat timesBoldUnderline;
+private WritableCellFormat times;
+private String inputFile;
+public void setOutputFile(String inputFile) {
+this.inputFile = inputFile;
+}
+public void write() throws IOException, WriteException {
+File file = new File(inputFile);
+WorkbookSettings wbSettings = new WorkbookSettings();
+wbSettings.setLocale(new Locale("en", "EN"));
+WritableWorkbook workbook = Workbook.createWorkbook(file, wbSettings);
+workbook.createSheet("Report", 0);
+WritableSheet excelSheet = workbook.getSheet(0);
+createLabel(excelSheet);
+createContent(excelSheet);
+workbook.write();
+workbook.close();
+}
+private void createLabel(WritableSheet sheet)
+throws WriteException {
+// Lets create a times font
+WritableFont times10pt = new WritableFont(WritableFont.TIMES, 10);
+// Define the cell format
+times = new WritableCellFormat(times10pt);
+// Lets automatically wrap the cells
+times.setWrap(true);
+// Create a bold font with underlines
+WritableFont times10ptBoldUnderline = new WritableFont(
+WritableFont.TIMES, 10, WritableFont.BOLD, false,
+UnderlineStyle.SINGLE);
+timesBoldUnderline = new WritableCellFormat(times10ptBoldUnderline);
+// Lets automatically wrap the cells
+timesBoldUnderline.setWrap(true);
+CellView cv = new CellView();
+cv.setFormat(times);
+cv.setFormat(timesBoldUnderline);
+cv.setAutosize(true);
+// Write a few headers
+addCaption(sheet, 0, 0, "Student Name");
+addCaption(sheet, 1, 0, "Subject 1");
+addCaption(sheet, 2, 0, "subject 2");
+addCaption(sheet, 3, 0, "subject 3");
+}
+private void createContent(WritableSheet sheet) throws WriteException,
+RowsExceededException {
+// Write a few number
+for (int i = 1; i < 10; i++) {
+// First column
+addLabel(sheet, 0, i, "Student " + i);
+// Second column
+addNumber(sheet, 1, i, ((i*i)+10));
+addNumber(sheet, 2, i, ((i*i)+4));
+addNumber(sheet, 3, i, ((i*i)+3));
+}
+}
+private void addCaption(WritableSheet sheet, int column, int row, String s)
+throws RowsExceededException, WriteException {
+Label label;
+label = new Label(column, row, s, timesBoldUnderline);
+sheet.addCell(label);
+}
+private void addNumber(WritableSheet sheet, int column, int row,
+Integer integer) throws WriteException, RowsExceededException {
+Number number;
+number = new Number(column, row, integer, times);
+sheet.addCell(number);
+}
+private void addLabel(WritableSheet sheet, int column, int row, String s)
+throws WriteException, RowsExceededException {
+Label label;
+label = new Label(column, row, s, times);
+sheet.addCell(label);
+}
+public static void main(String[] args) throws WriteException, IOException {
+student_excel_write test = new student_excel_write();
+test.setOutputFile("C:/Users/Savitha/Desktop/Student.xls");
+test.write();
+System.out.println("Please check the result file under
+C:/Users/Savithar/Desktop/Student.xls "); }
+}
+
+
+
+9. TEST THE ADDITION OF TWO VALUES  
+Program Coding: 
+package Mytest; 
+import java.util.Scanner; 
+import org.openqa.selenium.By; 
+import org.openqa.selenium.WebDriver; 
+import org.openqa.selenium.chrome.ChromeDriver; 
+package Mytest; 
+import org.openqa.selenium.By; 
+import org.openqa.selenium.WebDriver; 
+import org.openqa.selenium.chrome.ChromeDriver; 
+public class addtwonumbers { 
+public static void main(String[] args) { 
+ System.setProperty("webdriver.chrome.driver", "C:\\Users \\Desktop\\SP\\Testing  SW\\TCS Addon\\Softwares\\chromedriver.exe"); 
+WebDriver driver = new ChromeDriver(); 
+driver.get("C:\\Users\\Desktop\\SP\\Testing\\prgsum.html"); 
+String data = "200"; 
+String data2 = "100"; 
+driver.findElement(By.name("txt1")).sendKeys("200".toString()); 
+driver.findElement(By.name("txt2")).sendKeys("100".toString()); 
+int value1 = Integer.parseInt(data); 
+ int value2 = Integer.parseInt(data2); 
+ int total = value1 + value2; 
+ driver.findElement(By.name("txt3")).sendKeys( String.valueOf(total)); } 
+}
+prgsum.html file 
+<html> 
+<head> 
+<title>Login </title> 
+</head> 
+<body> 
+<h4><center> Adding Two Numbers</center> </h4> </br> <p5>Value 1 : </p5> 
+<input type="text" name="txt1"> </br> </br> 
+<p6>Value 2 :</p6> 
+<input type="text" name="txt2"> </br></br> 
+<p7>Result :</p7> 
+<input type="text" name="txt3"> </br> 
+</body> 
+</html>
+
+
+
+10. TEST SUIT CONTAINING 4 TEST CASES 
+Program Coding: 
+Arithmetic opearation.html 
+<html> 
+<head> 
+<title>Arithmetic operations</title> 
+</head> 
+<script type="text/javascript"> 
+function Addition() 
+{ 
+x=parseFloat(calc.value1.value); 
+y=parseFloat(calc.value2.value); 
+z=(x+y); 
+alert("The Addition result is"+z); 
+calc.value3.value=z 
+} 
+function Subtraction() 
+{ 
+var x,y,z; 
+x=calc.value1.value; 
+y=calc.value2.value; 
+z=x-y; 
+alert("The subtraction result is "+z); 
+calc.value3.value=z 
+} 
+function Multiplication() 
+{ 
+var x,y,z; 
+x=calc.value1.value; 
+y=calc.value2.value; 
+z=x*y; 
+alert("The Multiplication result is "+z); 
+calc.value3.value=z
+} 
+function Division() 
+{ 
+var x,y,z; 
+x=calc.value1.value; 
+y=calc.value2.value; 
+z=x/y; 
+alert("The subtraction result is "+z); 
+calc.value3.value=z 
+} 
+</script> 
+</head> 
+<body> 
+<form name="calc"> 
+<h1>Arithmetic operations</h1> 
+Enter first Numeric Value : <input type="number" id="value1"> </br> Enter Second Numeric Value : <input type="number" id="value2"> </br> </br> 
+Result of the Arithmetic operation is : <output type="number" id="value3"> </output></br> <input type="button" Value="Addition" onClick=Addition()> </br> 
+<input type="button" Value="Subtraction" onClick=Subtraction()></br> <input type="button" Value="Multiplication" onClick=Multiplication()></br> <input type="button" Value="Division" onClick=Division()></br> 
+</form> 
+</body> 
+</html>
+
+
+
