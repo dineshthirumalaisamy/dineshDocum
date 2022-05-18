@@ -1,0 +1,669 @@
+1.	FORMATTING TAGS
+
+<html>
+<head>
+<title>Formatting Tags</title>
+</head>
+<body>
+<h1>SALES LETTER</h1>
+<hr>
+<center>
+<img src="http://s3.amazonaws.com/pix.iemoji.com/
+images/emoji/apple/ios-12/256/books.png">
+</center>
+<b>European Books ltd</b><br>
+<tt>20<sup>st</sup> Johns Road<br>
+London 3W11 2Q3 ENGLAND<br>
+Tele:01712169191 Fax:0712160000</tt><br>
+<br>
+<tt><u>December 24<sup>th</sup>2019 </u> </tt><br>
+<br>
+<I><tt>IA LIBRARY INTERNATIONALE<br>
+24 Place Castelle<br>
+13006 Marseille<br>
+FRANCE</tt></I><br>
+<br>
+CUSTOMER<br>
+ <p>We have great pleasure in sending you a brochure about a new series of three textbook 
+<b>FLUENT ENGLISH</b> which provides interesting, challenging and provocative reading 
+and discussion materials for <br>
+ Students learning English at an upper-intermediate or advanced level<br>
+ Inside the brochure, you will find a reply coupon on to be completed and returned to 
+European Books in London by June 30<sup>th</sup>.We will send you a specimen copy 
+giving you a chance to examine <b>FLUENT<br> ENGLISH</b> in more details<br>
+ If you have any queries concerning this new publication please do not hesitate to contact 
+us at the above address</p>
+<hr>
+<p align="right">
+<small>Yours</small>sincerely,<br>
+<b>Peter Jones</b><br>
+<I>Marketing<br>
+Manager</I><br>
+<strike>Eee 1 brochure</strike><br>
+</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+OUTPUT:
+
+ 
+
+
+
+
+
+
+
+
+
+3.	TABLE TAG
+
+<HTML>
+<HEAD>
+<H1><MARQUEE>COLOR TABLE</MARQUEE></H1>
+<TITLE>COLORS</TITLE>
+</HEAD>
+<BODY BGCOLOR="SKY BLUE">
+<TABLEBORDER="5" CELLSPACING="5" CELLPADDING="5" ALIGN="CENTER">
+<TR>
+<TH>COLOR</TH>
+<TH>NAME</TH>
+<TH>HEXADECIMAL</TH>
+<TH>RGB VALUE</TH>
+</TR>
+<TR>
+<TD BGCOLOR="#FFFFFF"></TD>
+<TD>WHITE</TD>
+<TD>#FFFFFF</TD>
+<TD>(255, 255, 255)</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#00FF00"></TD>
+<TD>LIME</TD>
+<TD>#00FF00</TD>
+<TD>(0, 255, 0)</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#00FFFF"></TD>
+<TD>AQUA</TD>
+<TD>#00FFFF</TD>
+<TD>(0, 255, 255)</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#FF00FF"></TD>
+<TD>FUCHSIA</TD>
+<TD>#FF00FF</TD>
+<TD>(255, 0, 255)</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#FF0000"></TD>
+<TD>RED</TD>
+<TD>#FF0000</TD>
+<TD>(255, 0, 0)</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#000000"></TD>
+<TD>BLACK</TD>
+<TD>#000000</TD>
+<TD>(0, 0, 0)</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#800000"></TD>
+<TD>MERUN</TD>
+<TD>#800000</TD>
+<TD>(128, 0, 0)</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#808000"></TD>
+<TD>OLIVE</TD>
+<TD>#808000</TD>
+<TD>(128, 128, 0)</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTPUT:
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+3. LIST TAG
+
+HOME.HTML
+
+<html>
+<head>
+<title>Home</title>
+</head>
+<imgsrc="https://www.psgrkcw.ac.in/wp-content/themes/krishnammal/images/logo.jpg ">
+<h4>(Autonomous college)</h4>
+<hr>
+<ol type="1">
+<li>courses offered</li>
+<ul type="circle">
+<a href="ug.html">
+<li>ug</li>
+</a>
+<a href="pg.html">
+<li>pg</li>
+</a>
+<a href="tab.html">
+<li>time table</li>
+</a>
+</ul>
+<li>contact us:T-422 429 5929</li>
+<li>infrastructure</li>
+</ol>
+<hr>
+</body>
+</html>
+
+UG.HTML
+
+<html>
+<head>
+<title>Home</title>
+</head>
+<center>
+<imgsrc="https://www.psgrkcw.ac.in/wpcontent/themes/krishnammal/images/logo.jpg "></center>
+<h4>(Autonomous college)</h4>
+<hr>
+<ol type="1">
+<li>B.Com</li>
+<ul type="circle">
+<li>B.COM CA</li>
+<li>B.COM BA</li>
+<li>B.COM PA</li>
+</ul>
+<li>BBA</li>
+<ul type="circle">
+<li>BBA RM</li>
+<li>BBA BPM</li>
+</ul>
+<li>BSC</li>
+<ul type="circle">
+<li>BSC CS</li>
+<li>BSC IT</li>
+<li>BSC MATHS</li>
+</ul>
+</ol>
+<hr>
+<a href="home.html">
+<center>
+<imgsrc="https://p.kindpng.com/picc/s/111-1110719_blue-home-page-icon-pngwebsite-icon-home.png" width="300" height="300">
+</center>
+</a>
+</body>
+</html>
+
+PG.HTML
+
+<html>
+<head>
+<title>Home</title>
+</head>
+<center>
+<imgsrc="https://www.psgrkcw.ac.in/wpcontent/themes/krishnammal/images/logo.jpg "></center>
+<h4>(Autonomous college)</h4>
+<hr>
+<ol type="1">
+<li>PG Courses offered</li>
+<ul type="circle">
+<li>M.COM </li>
+<li>MSC</li>
+<li>MBA</li>
+<li>MA</li>
+</ul>
+</ol>
+<hr>
+<a href="home.html"> <center><img src="https://p.kindpng.com/picc/s/111-1110719_bluehome-page-icon-png-website-icon-home.png"width="300" height="300"> </center>
+</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTPUT:
+  
+
+
+
+
+
+
+
+
+
+
+
+
+4. FRAMES AND FRAMESET
+
+
+ Frame.html:
+<html>
+<frameset rows="20%,80%">
+<frame src="Top.html" name="top">
+<frameset cols="20%,80%">
+<frame src="Menu.html" name="left">
+<frame src="About us.html" name="right">
+<noframe>
+frame does not support in this browser
+</noframe>
+</frameset>
+<body>
+</body>
+</html>
+
+Top.html:
+<html>
+<body>
+<center>
+<img src="axis-bank-logo.jpg" height="100" width="100">
+</img>
+</center>
+</body>
+</html>
+
+Menu.html:
+<html>
+<body>
+<a href="About us.html" target="right">About us</a>
+<br>
+<a href="My Account Info.html" target="right">My Account Info</a>
+<br>
+<a href="My Deposit.html" target="right">My Deposit</a>
+<br>
+<a href="Contact us.html" target="right">Contact us</a>
+</body>
+</html>
+
+About us.html:
+<html>
+<body>
+<center><h1><b><u>ABOUTAXIS BANK</u></b></center><center><br>
+<br><br>
+<p align="left">
+The bank was founded on 3 December 1993 as UTI Bank, opening its registered office in Ahmedabad and a corporate office in Mumbai. The bank was promoted jointly by the Administrator of the Unit Trust of India (UTI), Life Insurance Corporation of India (LIC), General Insurance Corporation, National Insurance Company, The New India Assurance Company, The Oriental Insurance Corporation and United India Insurance Company. The first branch was inaugurated on 2 April 1994 in Ahmedabad by Manmohan Singh, then finance minister of India
+</p>
+<p align="left">
+In 2001 UTI Bank agreed to merge with Global Trust Bank, but the Reserve Bank of India (RBI) withheld approval and the merger did not take place. In 2004, the RBI put Global Trust under a moratorium and supervised its merger with Oriental Bank of Commerce. The following year, UTI bank was listed on the London Stock Exchange. In the year 2006, UTI Bank opened its first overseas branch in Singapore. The same year it opened an office in Shanghai, China. In 2007, it opened a branch in the Dubai International Financial Centre and branches in Hong Kong.
+</p>
+</center>
+</body>
+</html>
+
+My Account Info.html:
+<html>
+<head>
+<h1><b><u><center>My Account Information</center></u></b></h1>
+</head>
+<br><br><br>
+<body>
+<pre><h1>
+ACCOUNT HOLDER'S NAME:divya
+ACCOUNT NUMBER:254682378965
+PASSWORD:12345
+ACCOUNT TYPE:savings account
+</h1></pre>
+</body>
+</html>
+
+My Deposit.html:
+<html>
+<head>
+<h1><b><u><center>Deposit Information</center></u></b></h1>
+</head>
+<body>
+<form>
+<center><br><br><br>
+ACCOUNT HOLDER'S NAME:<input type="text" name="Account Holder's name"/><br><br><br>
+ACCOUNT NUMBER:<input type="text" name="Account number"/><br><br><br>
+DEPOSIT AMOUNT:<input type="text" name="Deposit amount"/><br><br><br>
+<input type="submit" name="submit" value="submit">
+</center>
+</form>
+</body>
+</html>
+
+Contact us.html:
+<html>
+<head>
+<h1><b><u>Contact us</u></b></h1>
+</head>
+<body>
+<dl>
+<dr>Address:</dr>
+<dd>Axis Bank Limited,'Axis House',
+c-2,Wadia International Center,
+Mumbai-400025.
+</dd>
+<dr>Cell no:</dr>
+<dd>9876543210
+</dd>
+<dr>Mail id:</dr>
+<dd>axisbank@gmail.com</dd>
+</dl>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTPUT:
+
+
+
+ 
+
+
+
+5. CASCADING STYLE SHEET
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Before and after pseudo selector</title>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+ header::before{
+        background:url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        . navigation {
+            font-family: 'Bree Serif', serif;
+            font-size: 20px;
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px 23px;
+        }
+
+        section {
+            height: 344px;
+            font-family: 'Bree Serif', serif;
+            margin: 3px 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            text-align: center;
+        }
+ /* section::after{
+        content:"this is a content"
+    } */
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+        <section>
+            <h1> Welcome to Coding World</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident error ratione doloribus sed dolorum,
+                ipsum cumque reprehenderit dignissimos architecto veniam optio sint aliquam consectetur corrupti vero
+                similique velit. Possimus eum consequatur delectus quia magni.</p>
+        </section
+</body>
+</html>
+
+
+
+
+
+
+OUTPUT:
+
+
+ 
+
+
+	
+
+6. IMPLEMENT IMAGE, BACKGROUND COLOUR, AND TEXT
+
+<html>
+<head>
+<title>ADVERTISEMENT</title>
+<style>
+body
+{
+background-image:url("https://st4.depositphotos.com/12902820/27934/i/1600/depositphotos_279349552-stock-photo-school-supplies-double-side-border.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+}
+</style>
+</head>
+<body>
+<font face="verdana" size="16" color="purple">
+<h1><i><center>SAT STATIONERIES<BR></center></i></h1>
+<center>
+<img src="https://i.gifer.com/9fl1.gif">
+</cenmter>
+<marquee><b>EXCLUSIVE OFFER FOR STUDENTS</b></marquee>
+<br>
+<center>grand launch
+<br>
+open from 7-10
+<br>
+place:gandhipuram,cbe</center>
+<br>
+</font>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTPUT:
+
+ 
+
+
+
+
+
+
+
+
+
+7. RADIO BUTTON, CHECKBOX, AND LIST BOX
+
+<html>
+<head>
+<title> Forms </title>
+</head>
+<body bgcolor="Skyblue">
+<h2> Registration Form </h2>
+<form>
+<fieldset>
+<legend> User Personal Information </legend>
+<label> Enter your Full name</label><br>
+<input type="text"  name="name"><br>
+<label> Enter your email</label><br>
+<input type="email"  name="email"><br>
+<label> Enter your password</label><br>
+<input type="password"  name="pass"><br>
+<label> Confirm your password</label><br>
+<input type="password"  name="pass"><br>
+<label> Enter your Gender</label><br>
+<input type="radio" id="gender" name="gender" value="Male"/>Male <br>
+<input type="radio" id="gender" name="gender" value="Female"/> Female<br>
+<input type="radio" id="gender" name="gender" value="Others"/> Others<br>
+<br> Enter your address <br>
+<textarea> </textarea> <br>
+<label> Are you a Resident of India ? </label> <br>
+ <input type="checkbox" id="country1" name="country1" value="Yes">
+  <label for="country1"> Yes </label><br>
+ <input type="checkbox" id="country2" name="country2" value="No">
+  <label for="country2"> No </label><br>
+<label for="major">Are you above 18 years old?:</label>
+<select name="major" id="major">
+    <option value="18 above">18 above</option>
+    <option value="18 below">18 below</option>
+ </select>
+<br> <br>
+ <input type="submit" value="Sign-up">
+</fieldset>
+</form>
+<body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTPUT:
+
+
+ 
